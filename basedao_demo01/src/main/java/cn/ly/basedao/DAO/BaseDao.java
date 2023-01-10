@@ -64,7 +64,7 @@ public class BaseDao<T> {
             int columnCount = metaData.getColumnCount();
             while (rs.next()) {
                 //反射创建对象
-                t = (T)clazz.newInstance();
+                t = clazz.newInstance();
                 //遍历每一列
                 for (int i = 0; i < columnCount; i++) {
                     Object colVal = rs.getObject(i + 1);
@@ -86,7 +86,7 @@ public class BaseDao<T> {
         }
         return list;
     }
-    
+
     //通用查询
     public ResultSet executeQuery(String sql,Object... params){
         try {
