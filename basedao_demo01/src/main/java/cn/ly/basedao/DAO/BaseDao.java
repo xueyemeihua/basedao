@@ -149,7 +149,8 @@ public class BaseDao<T> {
         try {
             Class.forName("com.mysql.jdbc.Driver");
             //获得连接
-            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/kg20?useUnicode=true&characterEncoding=utf8", "root", "ANHUIaq0415");
+            connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/kg20?useUnicode=true&characterEncoding=utf8",
+                    "ly", "ly");
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         } catch (SQLException e) {
